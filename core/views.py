@@ -1,13 +1,9 @@
 from .serializers import *
 from .models import *
-from django.shortcuts import get_object_or_404, redirect
-from django.contrib.auth.decorators import login_required
-from django.contrib import messages
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import authenticate, login as django_login
+from django.shortcuts import get_object_or_404
+from django.contrib.auth import authenticate
 from django.contrib.auth import get_user_model
-from rest_framework.exceptions import NotFound
+
 
 
 # DRF imports
@@ -18,7 +14,6 @@ from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import generics, viewsets
-from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 import logging
 
